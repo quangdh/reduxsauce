@@ -1,7 +1,3 @@
-<img src='./_art/redux_sauce.png' align='left' />
-
-[![npm module](https://badge.fury.io/js/reduxsauce.svg)](https://www.npmjs.org/package/reduxsauce)
-
 # What's The Story?
 
 Provides a few tools for working with Redux-based codebases.
@@ -142,17 +138,15 @@ Use `createTypes()` to create the object representing your action types.  It's w
 // Types.js
 import { createTypes } from 'reduxsauce'
 
-export default createTypes(`
-  LOGIN_REQUEST
-  LOGIN_SUCCESS
-  LOGIN_FAILURE
-
-  CHANGE_PASSWORD_REQUEST
-  CHANGE_PASSWORD_SUCCESS
-  CHANGE_PASSWORD_FAILURE
-
-  LOGOUT
-`, {}) // options - the 2nd parameter is optional
+export default createTypes([
+  'LOGIN_REQUEST',
+  'LOGIN_SUCCESS',
+  'LOGIN_FAILURE',
+  'CHANGE_PASSWORD_REQUEST',
+  'CHANGE_PASSWORD_SUCCESS',
+  'CHANGE_PASSWORD_FAILURE',
+  'LOGOUT',
+]) // options - the 2nd parameter is optional
 
 ```
 
