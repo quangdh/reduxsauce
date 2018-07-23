@@ -1,3 +1,7 @@
+# What's is this?
+
+This is a branch of "ReduxSauce" to support "Redux Promise Middleware". 
+
 # What's The Story?
 
 Provides a few tools for working with Redux-based codebases.
