@@ -91,8 +91,6 @@ var createTypes$1 = (function (types) {
     });
 
     return pipe(reject(isNilOrEmpty), map(function (x) {
-        return [x, prefix + x];
-    }), map(function (x) {
         return [x, x];
     }), fromPairs)(types);
 });
