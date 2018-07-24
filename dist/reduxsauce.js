@@ -81,7 +81,6 @@ var _REJECTED = "_REJECTED";
 
 var createTypes$1 = (function (types) {
     if (isNilOrEmpty(types)) throw new Error('valid types are required');
-
     var items = [];
     types.forEach(function (x) {
         items.push(x);
@@ -92,7 +91,7 @@ var createTypes$1 = (function (types) {
 
     return pipe(reject(isNilOrEmpty), map(function (x) {
         return [x, x];
-    }), fromPairs)(types);
+    }), fromPairs)(items);
 });
 
 var _extends = Object.assign || function (target) {
