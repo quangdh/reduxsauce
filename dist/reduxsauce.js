@@ -75,15 +75,19 @@ var cr = (function (initialState, handlers) {
 
 var isNilOrEmpty = anyPass([isNil, isEmpty]);
 
+var _FULFILLED = "_FULFILLED";
+var _PENDING = "_PENDING";
+var _REJECTED = "_REJECTED";
+
 var createTypes$1 = (function (types) {
     if (isNilOrEmpty(types)) throw new Error('valid types are required');
 
     var items = [];
     types.forEach(function (x) {
         items.push(x);
-        items.push('' + x + _FULFILLED);
-        items.push('' + x + _PENDING);
-        items.push('' + x + _REJECTED);
+        items.push("" + x + _FULFILLED);
+        items.push("" + x + _PENDING);
+        items.push("" + x + _REJECTED);
     });
 
     return pipe(reject(isNilOrEmpty), map(function (x) {
